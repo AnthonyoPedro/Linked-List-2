@@ -10,7 +10,7 @@ int encontrarMeio(Node* inicio) {
     Node* lento = inicio;
     Node* rapido = inicio;
 
-    while (rapido != null && rapido->proximo != null) {
+    while (rapido != NULL && rapido->proximo != NULL) {
         lento = lento->proximo;
         rapido = rapido->proximo->proximo;
     }
@@ -21,7 +21,7 @@ int encontrarMeio(Node* inicio) {
 bool procurar(Node* inicio, int valorProcurado) {
     Node* atual = inicio;
 
-    while (atual != null) {
+    while (atual != NULL) {
         if (atual->valor == valorProcurado) {
             return true;
         }
@@ -34,12 +34,12 @@ bool procurar(Node* inicio, int valorProcurado) {
 
 int main() {
 
-    Node* n1 = new Node{1, null};
-    Node* n2 = new Node{2, null};
-    Node* n3 = new Node{3, null};
-    Node* n4 = new Node{4, null};
-    Node* n5 = new Node{5, null};
-    Node* n6 = new Node{6, null};
+    Node* n1 = new Node{1, NULL};
+    Node* n2 = new Node{2, NULL};
+    Node* n3 = new Node{3, NULL};
+    Node* n4 = new Node{4, NULL};
+    Node* n5 = new Node{5, NULL};
+    Node* n6 = new Node{6, NULL};
 
     n1->proximo = n2;
     n2->proximo = n3;
@@ -49,7 +49,6 @@ int main() {
 
     Node* inicio = n1;
 
-    
     cout << "Valor do meio: " << encontrarMeio(inicio) << endl;
 
     cout << "Procurando o valor 4: ";
